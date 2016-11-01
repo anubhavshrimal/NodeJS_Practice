@@ -31,7 +31,11 @@ Practice on Node.js (Javascript Framework)
 
 Resources Used:
 mlab - online mongoDB
+
 MailGun for free email api or Node-Mailer for email from direct server
+
 Multer for file upload (npm)
+
 http-server - for making a folder sharable over the web from CLI
+
 
