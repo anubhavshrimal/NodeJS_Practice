@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Material Design</title>
+
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+
+</head>
+<body ng-app="myApp">
+
+<md-button class="md-fab" aria-label="Eat cake">
+    OK
+</md-button>
+
+<input type="text" ng-model="showDarkTheme">
+
+<md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+    <md-card-title>
+        <md-card-title-text>
+            <span class="md-headline">Card with image</span>
+            <span class="md-subhead">Large</span>
+        </md-card-title-text>
+        <md-card-title-media>
+            <div class="md-media-lg card-media"></div>
+        </md-card-title-media>
+    </md-card-title>
+    <md-card-actions layout="row" layout-align="end center">
+        <md-button>Action 1</md-button>
+        <md-button>Action 2</md-button>
+    </md-card-actions>
+</md-card>
+
+
+<div layout="row" layout-align="center center" layout-xs="column">
+    <div flex="25" style="background: red">
+        I'm above on mobile, and to the left on larger devices.
+    </div>
+    <div flex="25" style="background: yellow">
+        I'm below on mobile, and to the right on larger devices.
+    </div>
+</div>
+
+
+<div ng-controller="DemoCtrl as ctrl" layout="column" ng-cloak>
+    <md-content class="md-padding">
+        <form ng-submit="$event.preventDefault()">
+            <p>Use <code>md-autocomplete</code> to search for matches from local or remote data sources.</p>
+            <md-autocomplete
+                    ng-disabled="ctrl.isDisabled"
+                    md-no-cache="ctrl.noCache"
+                    md-selected-item="ctrl.selectedItem"
+                    md-search-text-change="ctrl.searchTextChange(ctrl.searchText)"
+                    md-search-text="ctrl.searchText"
+                    md-selected-item-change="ctrl.selectedItemChange(item)"
+                    md-items="item in ctrl.querySearch(ctrl.searchText)"
+                    md-item-text="item.display"
+                    md-min-length="0"
+                    placeholder="What is your favorite US state?">
+                <md-item-template>
+                    <span md-highlight-text="ctrl.searchText" md-highlight-flags="^i">{{item.display}}</span>
+                </md-item-template>
+                <md-not-found>
+                    No states matching "{{ctrl.searchText}}" were found.
+                    <a ng-click="ctrl.newState(ctrl.searchText)">Create a new one!</a>
+                </md-not-found>
+            </md-autocomplete>
+            <br/>
+            <md-checkbox ng-model="ctrl.simulateQuery">Simulate query for results?</md-checkbox>
+            <md-checkbox ng-model="ctrl.noCache">Disable caching of queries?</md-checkbox>
+            <md-checkbox ng-model="ctrl.isDisabled">Disable the input?</md-checkbox>
+            <p>By default, <code>md-autocomplete</code> will cache results when performing a query.  After the initial call is performed, it will use the cached results to eliminate unnecessary server requests or lookup logic. This can be disabled above.</p>
+        </form>
+    </md-content>
+</div>
+
+</body>
+</html>

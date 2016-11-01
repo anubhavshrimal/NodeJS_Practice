@@ -1,0 +1,16 @@
+{
+  "name": "node-server",
+  "version": "1.0.0",
+  "description": "this is a node server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "anubhav",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "morgan": "^1.7.0"
+  }
+}

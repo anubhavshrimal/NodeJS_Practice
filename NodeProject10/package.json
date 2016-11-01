@@ -1,0 +1,17 @@
+{
+  "name": "nodeproject10",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine-node spec/",
+    "start": "node index.js"
+  },
+  "author": "Anubhav Shrimal",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "request": "^2.72.0",
+    "request-promise": "^3.0.0"
+  }
+}

@@ -1,0 +1,61 @@
+if you have package.json then use npm install
+
+whenever you see --save-dev it means its a dev mode dependency whereas --save is production dependency
+
+npm init                                    to initialise node project with package.json
+npm install express --save                to download express
+sudo npm install -g nodemon               automatically restarts your server when changes are saved (globally installed)
+npm install body-parser --save
+npm install morgan --save                 logger for server
+sudo npm install -g node-inspector             node debugger (globally installed)
+npm install mongodb --save                 to install mongoDB "Drivers"
+npm install mongoose --save                 to make models in mongodb easily
+npm install q --save                        library for promises
+sudo npm install sails -g                   sails webframework for node js which works similar to rails and is used for mvc
+-----------------------------------------------
+npm install passport --save                 install passport.js an authentication library (google, fb, git)
+npm install passport-local --save           local strategy for passport
+npm install express-session --save          for maintaining session
+npm install passport-google-oauth --save    google strategy for passport
+------------------------------------------------
+npm install socket.io                       get client and server library for socket
+------------------------------------------------
+heroku login                                login into heroku account
+heroku create                               create a heroku app
+git push heroku master:<BranchName>        push your local project branch on heroku master server (by default BranchName is master)
+heroku open                                 to open the website
+heroku logs —tail				to see the server console on your pc
+------------------------------------------------
+sudo npm install jasmine-node -g            testing of node-js code
+jasmine-node <TEST-FILES-FOLDER-NAME>       to run the test scripts in spec/ folder
+npm install request --save                  to install "request" library for jasmine-node
+npm test                                    to run the test command specified in package.json (see NodeProject10)
+------------------------------------------------
+sudo npm install coffee-script -g           Install coffeescript
+--------------------------------------------------
+npm install request-promise --save          promise library with then syntax
+--------------------------------------------------
+npm install compression --save              compression library
+------------------------------------------------
+sudo npm install --global gulp-cli          install gulp command line interface globally
+npm install gulp --save                     install gulp locally
+npm install --save-dev <PLUGIN-NAME>        install plugin in dev mode
+gulp                                        to execute all the tasks in gulpfile
+gulp <TASK>                                 to run the specific task in gulpfile
+for using gulp plugins goto gulpjs.com/plugins/
+------------------------------------------------
+npm install async --save                    install async plugin from npm
+------------------------------------------------
+sudo npm install forever -g                 install forever module to run server even after crashing
+forever start index.js
+-----------------------------------------------
+npm install jade --save                     templating library
+npm install ejs --save                      templating library
+-----------------------------------------------
+npm install firebase --save
+-----------------------------------------------
+npm run-script <script name from your package.json> "this is used when the command name is not a common one in package.json"
+————————————————————————————————————
+npm install http-server -g			make any folder a server
+
+
