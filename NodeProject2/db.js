@@ -39,7 +39,7 @@ exports.getStudent = function(req, res){
     // asynchronous callback
     students.find({"name":req.params.name}).toArray(function (err, result) {
         if (err) throw err;
-        /*data of find() is not in any proper format suct as array of json
+        /*data of find() is not in any proper format such as array of json
          hence we change the format to array*/
 
         /*console.log(result);

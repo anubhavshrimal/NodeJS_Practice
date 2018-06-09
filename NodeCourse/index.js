@@ -10,7 +10,7 @@ var PORT = 8888;
 app.use(function (req, res, next) {         // custom middleware
     /*console.log(req.method, req.url);
     console.log("my middleware");*/
-    if(req.query.name == "dexter") {
+    if(req.query.firstname == "dexter") {
         req.method = "POST";
         req.url = "/polls";     // will redirect to diffrent api if name = dexter
     }
@@ -38,7 +38,7 @@ app.get("/poll", authenticator, function (req, res) {       // authenticates bef
 
 //Listen Server
 app.listen(PORT, function (req, res) {
-   console.log("server started"+PORT);
+   console.log("server started "+PORT);
 });
 
 function authenticator(req, res, next) {
